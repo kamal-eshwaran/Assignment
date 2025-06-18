@@ -26,3 +26,18 @@ int main(){
 
 	}
 }
+/*
+#include<stdio.h>
+#include<math.h>
+int main(){
+        int n,sum=0,rem,temp,a;
+        scanf("%d",&n);
+        a=log10(n)+1;
+        temp=n;
+        for(int i=1;n;n/=10,i++){
+                rem=n%10;
+                sum=sum+pow(rem,a);
+        }
+        (sum==temp)?printf("Armstrong\n"):printf("Not\n");
+}
+*/
