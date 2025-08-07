@@ -28,3 +28,36 @@ int main()
     matrix(row,col,c);
     
 }
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int arr1[3][3] = { {1,2,3},{4,5,6},{7,8,9} };
+    int arr2[3][3] = { {1,2,3},{4,5,6},{7,8,9} };
+    int arr3[3][3];
+    int r = sizeof arr1 / sizeof arr1[0];
+    int c = sizeof arr1[0] / sizeof arr1[0][0];
+    
+    printf("%d %d\n",r,c);
+    for(int i=0;i<r;i++)
+       for(int j=0;j<c;j++)
+       {
+          arr3[i][j] = arr1[i][j] + arr2[i][j];
+       }
+
+    for(int i=0;i<r;i++)
+    {
+        printf("[");
+    for(int j=0;j<c;j++)
+    {
+        printf("%2d ",arr3[i][j]);
+    }
+    printf("]\n");
+    }
+    
+    return 0;
+}
+*/
