@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<stdlib.h>
+  int main()
+  {
+         int r1,r2,c1,c2;
+         printf("Enter Row and Col for Arr1\n");
+         scanf("%d%d", &r1,&c1);
+         
+         printf("Enter Row and Col for Arr2\n");
+         scanf("%d%d", &r2,&c2);
+         
+         if(c1==r2)
+         {
+             
+         int **p=(int**)malloc(r1*sizeof(int*));
+         for(int i=0;i<r1;i++)
+         p[i]=(int*)malloc(c1*sizeof(int));
+         
+         int **q=(int**)malloc(r2*sizeof(int*));
+         for(int i=0;i<r2;i++)
+         q[i]=(int*)malloc(c2*sizeof(int));
+         
+         int **r=(int**)malloc(r1*sizeof(int*));
+         for(int i=0;i<r1;i++)
+         r[i]=(int*)malloc(c2*sizeof(int));
+         
+         printf("Enter Element for Arr1\n");
+         for(int i=0;i<r1;i++)
+         for(int j=0;j<c1;j++)
+         scanf("%d",&p[i][j]);
+         
+         printf("Enter Element for  Arr2\n");
+         for(int i=0;i<r2;i++)
+         for(int j=0;j<c2;j++)
+         scanf("%d",&q[i][j]);
+         
+         for(int i=0;i<r1;i++)
+         for(int j=0;j<c2;j++)
+         for(int k=0;k<c2;k++)
+         r[i][j] += p[i][k] * q[k][j];
+         
+         printf("Matrix Multiplication\n");
+         for(int i=0;i<r1;i++){
+         for(int j=0;j<c2;j++)
+         printf("%3d ",r[i][j]);
+         printf("\n");
+         }
+         }
+         
+         else
+         printf("Tata Bye Bye");
+         
+  } 
